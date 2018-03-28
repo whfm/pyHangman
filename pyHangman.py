@@ -2,7 +2,7 @@ import time
 
 name = input("What is your name? ")
 
-print("Hello, " + name, "Time to play hangman!")
+print("Hello, " + name, "time to play hangman!")
 
 print("")
 
@@ -34,8 +34,8 @@ while turns > 0:
         break
 
     guess = input("Guess a character: ")
-    while (len(guess) > 1):
-        guess = input("Guess a character (it has to be just one letter: ")
+    while ((len(guess) > 1) | guess.isdigit()):
+        guess = input("Guess a character (it has to be just one letter): ")
     guesses += guess
     if guess not in word:
         turns -= 1
